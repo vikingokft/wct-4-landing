@@ -1,19 +1,17 @@
 /* =============================
-
-    GENERAL STYLES
-
-=============================*/
+   GENERAL STYLES
+============================= */
 
 * {
   box-sizing: border-box;
 }
 
 /* Single-direction margin declaration to establish vertical rhythm. */
-h1,h2,h3,
-ul,ol,
+h1, h2, h3,
+ul, ol,
 p,
 img {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 body {
@@ -35,7 +33,7 @@ body {
   text-align: center;
 }
 
-h1, 
+h1,
 h2 {
   font-family: 'Great Vibes', cursive;
 }
@@ -59,37 +57,31 @@ a:hover {
 }
 
 /* =============================
-
-    HEADER STYLES
-
-=============================*/
+   HEADER STYLES
+============================= */
 
 .cover {
   background: url('../images/wedding-landing-cover.jpg') no-repeat 70% center/cover;
-  display: table;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   height: 100vh;
-  width: 100%;
+  width: 100vw;
 }
 
 @media (min-width: 768px) {
-
   .cover {
     background: url('../images/wedding-landing-cover.jpg') no-repeat center/cover;
   }
-
-}
-
-.hero-text-wrapper {
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .hero-text {
-  margin: 0 auto;
-  padding: .625rem;
-  color: hsla(0,0%,100%,.9);
-  background: hsla(100,0%,0%,.5);
+  width: 90%;
+  max-width: 60rem;
+  padding: 2.5rem 1rem;
+  color: hsla(0, 0%, 100%, .9);
+  background: hsla(100, 0%, 0%, .5);
 }
 
 .hero-text h1 {
@@ -99,7 +91,6 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-
   .hero-text {
     padding: 1.25rem;
     border-radius: 4px;
@@ -109,20 +100,11 @@ a:hover {
   .hero-text h1 {
     font-size: 7rem;
   }
-
 }
 
 .tagline {
   font-size: 1.25rem;
   letter-spacing: .15rem;
-}
-
-@media (min-width: 768px) {
-
-  .tagline {
-    text-transform: uppercase;
-  }
-
 }
 
 .tagline::after {
@@ -132,6 +114,12 @@ a:hover {
   height: 1px;
   width: 12.515625rem;
   margin: .5rem auto;
+}
+
+@media (min-width: 768px) {
+  .tagline {
+    text-transform: uppercase;
+  }
 }
 
 .date {
@@ -152,10 +140,8 @@ a:hover {
 }
 
 /* =============================
-
-      LOCATIONS STYLES
-
-=============================*/
+   LOCATIONS STYLES
+============================= */
 
 .blurb img {
   height: 7.5rem;
@@ -169,7 +155,6 @@ a:hover {
   font-family: 'Muli', sans-serif;
 }
 
-
 .blurb::after {
   content: "";
   display: block;
@@ -180,7 +165,6 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-
   .blurb {
     display: inline-block;
     width: 30%;
@@ -191,31 +175,28 @@ a:hover {
   .blurb::after {
     display: none;
   }
-
 }
 
 /* =============================
-
-        PROGRAM STYLES
-
-=============================*/
+   PROGRAM STYLES
+============================= */
 
 .program {
-  width: 100%;
+  width: 100vw;
   text-align: left;
-  background: hsla(100,0%,0%,.6);
+  background: hsla(100, 0%, 0%, .6);
   color: #d2ba87;
   font-family: 'Muli', sans-serif;
 }
 
 .program h2 {
   font-family: 'Great Vibes', cursive;
-  margin-top: 1rem;
+  margin-top: 1rem; /* To account for the unequal margins compared to the previous section. */
   text-align: center;
 }
 
 .program p {
-  font-style: italic; 
+  font-style: italic;
 }
 
 .program ul {
@@ -223,44 +204,39 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-
   .program-wrapper {
     width: 30vw;
     margin: 0 auto;
   }
-
 }
 
+
 /* =============================
-
-        GIFTS STYLES
-
-=============================*/
+   GIFTS STYLES
+============================= */
 
 .gifts img {
   height: 7.5rem;
 }
 
-.gifts p:last-child {   /* To even out the bottom and top margins of this section. */
+.gifts p:last-child { /* To even out the bottom and top margins of this section. */
   margin-bottom: 0;
 }
 
 
 /* =============================
-
-        FAQ STYLES
-
-=============================*/
+   FAQ STYLES
+============================= */
 
 .faq {
-  background: hsla(100,0%,0%,.6);;
+  background: hsla(100, 0%, 0%, .6);
   color: #d2ba87;
-  width: 100%;
+  width: 100vw;
   text-align: center;
 }
 
 .faq h2 {
-  margin-top: 1rem;
+  margin-top: 1rem; /* To even out top and bottom margins. */
 }
 
 .faq p {
@@ -278,7 +254,6 @@ a:hover {
 }
 
 @media (min-width: 768px) {
-
   .question-group {
     display: inline-block;
     width: 30%;
@@ -294,7 +269,6 @@ a:hover {
   .question-group h3 {
     text-align: left;
   }
-
 }
 
 .question {
@@ -307,26 +281,27 @@ a:hover {
 }
 
 /* =============================
-
-        FOOTER STYLES
-
-=============================*/
+   FOOTER STYLES
+============================= */
 
 footer {
   height: 10vh;
-  width: 100%;
+  width: 100vw;
   background-color: #606060;
   color: #fff;
   font-family: 'Muli', sans-serif;
-  display: table;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-size: .875rem;
+  padding: .5rem 1rem;
 }
 
-.footer-wrapper {
-  display: table-cell;
-  vertical-align: middle;
-  padding: .5rem 1rem;
+@media (min-width: 768px) {
+  footer {
+    min-height: 7vh;
+  }
 }
 
 footer p {
@@ -335,12 +310,4 @@ footer p {
 
 footer small {
   line-height: 1.5;
-}
-
-@media (min-width: 768px) {
-
-  footer {
-    min-height: 7vh;
-  }
-
 }
